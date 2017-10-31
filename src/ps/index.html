@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>图片编辑小工具</title>
+  <link rel="stylesheet" href="https://s01.appmifile.com/css/en/base.css?5bf1817">
+  <link rel="stylesheet" href="index.css">
+  <script type="text/javascript" src="db.js"></script>
+</head>
+<body>
+  <div class="toolbar">
+    <!--<button class="J_upload">上传图片</button>-->
+    <label class="baritem baritem-upload J_select_replace">
+      <input type="file" value="选择图片" class="hidden J_select" accept="image/jpg,image/jpeg,image/png">
+      <span class="iconfont icon icon-picture"></span>
+      <span class="name">打开</span>
+    </label>
+
+    <div class="baritem baritem-save J_saveto_indexdb">
+      <span class="iconfont icon icon-save1"></span>
+      <span class="name">保存</span>
+    </div>
+
+    <div class="baritem baritem-makeinput J_makeinput">
+      <span class="iconfont icon icon-add"></span>
+      <span class="name">添加文本</span>
+    </div>
+
+    <div class="baritem baritem-empty J_empty">
+      <span class="iconfont icon icon-empty"></span>
+      <span class="name">清空文本框</span>
+    </div>
+
+    <div class="baritem baritem-download J_preview">
+      <span class="iconfont icon icon-eye"></span>
+      <span class="name">生成</span>
+    </div>
+
+    <a class="baritem baritem-down J_download" href="" download="image">
+      <div class="notice">
+        *请先点击生成按钮再下载
+      </div>
+      <span class="iconfont icon icon-Save"></span>
+      <span class="name">下载</span>
+    </a>
+
+  </div>
+
+  <div class="main">
+    <section class="font_control">
+      <input type="color" class="color"/>
+      <input type="number" class="fontsize" value="14" step="1"/>
+      <span class="strong">B</span>
+    </section>
+    <section class="container">
+      <div class="containerimg">
+        <div class="border hidden">
+          <div class="target">
+            <!--这里放置的是传入的图片和添加的按钮，最后传入 html2canvas -->
+            <img src class="J_img">
+          </div>
+        </div>
+
+      </div>
+      <div class="painting">
+        <img src="" class="J_imgres" type="image/jpg">
+      </div>
+    </section>
+  </div>
+
+<script src="common/jq.js"></script>
+<script src="common/html2canvas.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
